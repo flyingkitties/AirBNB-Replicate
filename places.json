@@ -1,0 +1,46 @@
+ 
+[
+    {
+"img":"/images/london.jpeg",
+"location": "London",
+"distance": "45-min drive"
+},
+{
+"img":"/images/Liverpool.jpeg",
+"location": "Liverpool",
+"distance": "4.5-hour drive"
+
+},
+{
+    "img":"/images/Manchester.jpeg",
+"location": "Manchester",
+"distance": "4.5-hour drive"
+},
+{
+   "img":"/images/Brighton.jpeg",
+"location": "Brighton",
+"distance": "4.5-hour drive"
+},
+
+{
+    "img":"/images/newquay.jpeg",
+"location": "Newquay",
+"distance": "6-hour drive"
+},
+{
+    "img":"/images/York2.jpeg",
+"location": "York",
+"distance": "4-hour drive"
+},
+{
+    "img":"/images/hove.jpeg",
+"location": "Hove",
+"distance": "2-hour drive"
+},
+{
+    "img":"/images/Algarve.jpeg",
+    "location": "Algarve - Portugal",
+    "distance": "3-hour Plane"
+
+}
+]
