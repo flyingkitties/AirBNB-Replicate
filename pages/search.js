@@ -5,11 +5,13 @@ import Header from '../components/Header';
 import {format} from "date-fns";
 import { AtSymbolIcon } from '@heroicons/react/24/outline';
 import InfoCard from '../components/InfoCard';
+import Map from '../components/Map';
 
 
 
 function Search({searchResults}) {
 
+  
   
 
     const router = useRouter();
@@ -57,6 +59,11 @@ space-x-3 text-gray-800 whitespace-nowrap'>
 />))}
 </div>
 
+</section>
+
+<section className="hidden xl:inline-flex xl:min-w-[600px] cursor-pointer">
+  <Map searchResults={searchResults}
+  />
 </section>
 
 </main>
