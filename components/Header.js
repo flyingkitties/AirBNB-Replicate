@@ -49,7 +49,7 @@ const search = () => {
 
 
   return (
-    <header className='stiky w-full top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10'>
+    <header content="width=device-width" className='stiky w-full top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10'>
       
       {/* div left section */}
       <div onClick={() => router.push("/")} className='relative flex items-center h-10 cursor-pointer my-auto'>
@@ -64,7 +64,7 @@ const search = () => {
 
       {/* middle div */}
       <div className='flex items-center 
-      border border-2 rounded-full py-2 md:shadow-sm '>
+       border-2 rounded-full py-2 md:shadow-sm '>
         <input 
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
@@ -84,7 +84,7 @@ const search = () => {
       <div className='flex items-center space-x-4 
       justify-end text-gray-500'>
       <p className='hidden lg:inline'>Become a host</p>
-      <GlobeAltIcon className='h-6 cursor-pointer'/>
+      <GlobeAltIcon className='hidden md:inline h-6 cursor-pointer'/>
 
       <div className='flex items-center space-x-2 border-2 
       p-2 rounded-full'>

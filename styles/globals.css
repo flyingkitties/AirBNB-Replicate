@@ -36,6 +36,7 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #2C3333;
+    text-decoration-color: white;
   }
 }
