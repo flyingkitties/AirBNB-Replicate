@@ -64,7 +64,7 @@ function Footer() {
 
            <div className='flex justify-center  text-gray-600 '>
           <div className=" flex cursor-pointer my-auto text-xs ">
-              <p className='px-10 space-x-8'>© 2022 Rita Builds</p>
+              <p className='px-10 space-x-8'>© 2022 RG Buils</p>
               <p>·</p>
               <p className='px-4'>Privacy</p>
               <p>·</p>
