@@ -68,7 +68,7 @@ const search = () => {
         <input 
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
-         className='grow pl-5 bg-transparent 
+         className='grow pl-8 bg-transparent 
         outline-none text-sm text-gray-600 placeholder-gray-400' type="text" 
         placeholder={ placeholder || "Start your search"} />
       <MagnifyingGlassIcon className="hidden md:inline-flex

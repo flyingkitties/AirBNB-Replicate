@@ -26,20 +26,20 @@ const range = `${formattedStartDate}-${formattedEndDate}`
 
 
   return (
-    <div className='h-screen'>
+    <div className='h-screen '>
       <Header 
       className='stiky w-full top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10'
         placeholder={`${location} | ${range} | ${numberOfGuests} Guests` }
       />
 
-<main className='flex '>
+<main className='flex relative pr-80'>
 
-<section className='flex-grow px-5 pt-14'>
+<section className='flex-grow relative px-5 pt-14'>
     <p className='text-xs '>300+ Stays · {range} · for {numberOfGuests} Guests</p>
 <h1 className='text-3xl font-semibold mt-2 mb-6 '>Stays in {location}</h1>
 
 <div className='flex sm:inline-flex mb-5 mt-3 
-space-x-3 text-gray-800 whitespace-nowrap'>
+space-x-3 text-gray-800 whitespace-nowrap overflow-scroll'>
     <p className='button '>Cancelation Flexibility </p>
     <p className='button '>Type of Place </p>
     <p className='button '>Price </p>
@@ -62,7 +62,7 @@ space-x-3 text-gray-800 whitespace-nowrap'>
 
 </section>
 
-<section className="hidden xl:inline-flex xl:min-w-[600px] cursor-pointer">
+<section className="hidden xl:inline-flex xl:w-[300px] h-[300px]  xl:fixed  bottom-50 right-5  cursor-pointer">
   <Map searchResults={searchResults}
   />
 </section>
