@@ -50,9 +50,6 @@ function Header({ placeholder }) {
     });
     setSearchInput("");
   };
-  {
-    session ? console.log(session.user) : null;
-  }
 
   return (
     <header
