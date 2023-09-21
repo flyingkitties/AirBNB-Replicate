@@ -36,7 +36,7 @@ function Footer() {
         </div>
 
         <div className="space-y-4 text-xs text-gray-500">
-          <h5 className="font-bold text-gray-800">Airbnb</h5>
+          <h1 className="font-bold text-gray-800">Airbnb</h1>
           <p>Newsroom</p>
           <p>Learn about new features</p>
           <p>Letter from our founders</p>
