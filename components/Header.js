@@ -1,22 +1,22 @@
-import React from "react";
-import Image from "next/image";
-import { useState } from "react";
+import React from 'react';
+import Image from 'next/image';
+import { useState } from 'react';
 import {
   MagnifyingGlassIcon,
   GlobeAltIcon,
   Bars3Icon,
   UserCircleIcon,
   UsersIcon,
-} from "@heroicons/react/24/outline";
-import "react-date-range/dist/styles.css"; // main style file
-import "react-date-range/dist/theme/default.css"; // theme css file
-import { DateRangePicker } from "react-date-range";
-import { Router, useRouter } from "next/router";
-import { signIn, signOut, useSession } from "next-auth/react";
+} from '@heroicons/react/24/outline';
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { DateRangePicker } from 'react-date-range';
+import { Router, useRouter } from 'next/router';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 function Header({ placeholder }) {
   const { data: session, status } = useSession();
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState('');
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfGuests, setNumberOfGuests] = useState(1);
@@ -26,7 +26,7 @@ function Header({ placeholder }) {
   const selectionRange = {
     startDate,
     endDate,
-    key: "selection",
+    key: 'selection',
   };
 
   const handleSelect = (ranges) => {
@@ -35,12 +35,12 @@ function Header({ placeholder }) {
   };
 
   function resetInput() {
-    setSearchInput("");
+    setSearchInput('');
   }
 
   const search = () => {
     router.push({
-      pathname: "/search",
+      pathname: '/search',
       query: {
         location: searchInput,
         startDate: startDate.toISOString(),
@@ -48,7 +48,7 @@ function Header({ placeholder }) {
         numberOfGuests,
       },
     });
-    setSearchInput("");
+    setSearchInput('');
   };
 
   return (
@@ -58,7 +58,7 @@ function Header({ placeholder }) {
     >
       {/* div left section */}
       <div
-        onClick={() => router.push("/")}
+        onClick={() => router.push('/')}
         className="relative flex items-center h-10 cursor-pointer my-auto"
       >
         <Image
@@ -66,6 +66,7 @@ function Header({ placeholder }) {
           layout="fill"
           objectFit="contain"
           objectPosition="left"
+          alt="Logo"
         />
       </div>
 
@@ -80,7 +81,7 @@ function Header({ placeholder }) {
           className="grow pl-8 bg-transparent 
         outline-none text-sm text-gray-600 placeholder-gray-400"
           type="text"
-          placeholder={placeholder || "Start your search"}
+          placeholder={placeholder || 'Start your search'}
         />
         <MagnifyingGlassIcon
           className="hidden md:inline-flex
@@ -121,7 +122,7 @@ function Header({ placeholder }) {
             className=""
             ranges={[selectionRange]}
             minDate={new Date()}
-            rangeColors={["#FD5B61"]}
+            rangeColors={['#FD5B61']}
             onChange={handleSelect}
           />
           <div className="flex items-center border-b mb-4">
