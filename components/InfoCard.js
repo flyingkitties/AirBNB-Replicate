@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { HeartIcon } from '@heroicons/react/24/outline';
 import { StarIcon } from '@heroicons/react/24/outline';
 
 function InfoCard({ img, location, title, description, star, price, total }) {
+  const [liked, setLiked] = useState(false);
+
+  const handleClick = () => {
+    setLiked(!liked);
+  };
   return (
     <div
       className="flex py-5 px-2 pr-4 border-b cursor-pointer
@@ -23,7 +28,12 @@ function InfoCard({ img, location, title, description, star, price, total }) {
       <div className="flex flex-col flex-grow pl-5 ">
         <div className="flex justify-between ">
           <p>{location}</p>
-          <HeartIcon className="h-7 cursor-pointer" />
+          <HeartIcon
+            className={`h-7 cursor-pointer ${
+              liked && 'text-red-400 fill-red-400'
+            }`}
+            onClick={handleClick}
+          />
         </div>
 
         <h4 className="text-xl ">{title}</h4>

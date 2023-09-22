@@ -1,17 +1,18 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+@layer components {
   .button {
     @apply px-4 py-2 border rounded-full 
     cursor-pointer hover:shadow-lg active:scale-95
     active:bg-gray-200 transition transform duration-100
-    ease-out
+    ease-out;
+  }
+  .link {
+    @apply hover:underline cursor-pointer;
   }
 }
-
 
 html,
 body {
@@ -34,9 +35,15 @@ a {
   html {
     color-scheme: dark;
   }
+  header {
+    color: white;
+    background: #2c3333;
+    text-decoration-color: white;
+    color-scheme: white;
+  }
   body {
     color: white;
-    background: #2C3333;
+    background: #2c3333;
     text-decoration-color: white;
   }
   .footer {
